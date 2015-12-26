@@ -8,6 +8,7 @@ let SearchResult = React.createClass({
   render() {
     let result = this.props.result;
     let albumName = result.album.name;
+    let albumUri = result.album.uri;
     let artists = result.artists.map(function (artist) {
       return <Artist key={artist.id} name={artist.name}/>
     });
@@ -18,7 +19,7 @@ let SearchResult = React.createClass({
     return (
       <div className="SearchResult">
         <Track name={trackName} uri={trackUri}/>
-        <Album name={albumName} imageUrl={imageUrl}/>
+        <Album name={albumName} imageUrl={imageUrl} uri={albumUri}/>
         {artists}
       </div>
     );
