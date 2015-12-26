@@ -10,7 +10,7 @@ let SearchResult = React.createClass({
     let albumName = result.album.name;
     let albumUri = result.album.uri;
     let artists = result.artists.map(function (artist) {
-      return <Artist key={artist.id} name={artist.name}/>
+      return <Artist key={artist.id} name={artist.name} uri={artist.uri}/>
     });
     let imageUrl = result.album.images[2].url;
     let trackName = result.name;

@@ -5,7 +5,9 @@ let Artist = React.createClass({
   render() {
     return (
       <div className="Artist">
-        <span className="name">{this.props.name}</span>
+        <a className="uri" href={this.props.uri}>
+          <span className="name">{this.props.name}</span>
+        </a>
       </div>
     );
   }
