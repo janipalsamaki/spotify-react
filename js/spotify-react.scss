@@ -1,25 +1,44 @@
+$spotify-brand-color: #81b71a;
+
 .Search {
   font-size: 0.9em;
-  input {
-    display: block;
-    padding: 5px;
+
+  .SearchForm {
+    .searchString {
+      display: block;
+      padding: 5px;
+    }
   }
+
   .SearchResult {
     margin: 10px;
     clear: both;
-    a {
-      color: black;
-      text-decoration: none;
-      &:hover {
-        color: #81b71a;
+
+    .Track {
+      .name {
+        font-weight: bold;
       }
     }
-    img {
-      float: left;
-      padding: 0 10px 10px 0;
+
+    .Album {
+      .image {
+        float: left;
+        padding: 0 10px 10px 0;
+      }
     }
-    .trackName {
-      font-weight: bold;
+
+    .Artist {
+      .name {
+        font-style: italic;
+      }
+    }
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+    &:hover {
+      color: $spotify-brand-color;
     }
   }
 }

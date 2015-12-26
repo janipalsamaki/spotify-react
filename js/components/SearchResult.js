@@ -1,4 +1,7 @@
 import React from 'react';
+import Album from './Album.js';
+import Artist from './Artist.js';
+import Track from './Track.js';
 
 let SearchResult = React.createClass({
 
@@ -6,18 +9,17 @@ let SearchResult = React.createClass({
     let result = this.props.result;
     let albumName = result.album.name;
     let artists = result.artists.map(function (artist) {
-      return artist.name;
-    }).join(', ');
+      return <Artist name={artist.name}/>
+    });
     let imageUrl = result.album.images[2].url;
     let trackName = result.name;
     let trackUri = result.uri;
 
     return (
       <div className="SearchResult">
-        <a href={trackUri}>
-          <img src={imageUrl} height="64" width="64"/>
-          <span className="trackName">{trackName}</span><br/>{albumName}<br/>{artists}
-        </a>
+        <Track name={trackName} uri={trackUri}/>
+        <Album name={albumName} imageUrl={imageUrl}/>
+        {artists}
       </div>
     );
   }

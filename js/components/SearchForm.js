@@ -12,7 +12,7 @@ let SearchForm = React.createClass({
     return (
       <div className="SearchForm">
         <form onSubmit={this.handleSearch}>
-          <input type="text" placeholder="Type in search keywords" value={this.state.searchString}
+          <input type="text" className="searchString" placeholder="Type in search keywords" value={this.state.searchString}
                  onChange={this.handleChange}/>
           <input type="submit" value="Search"/>
         </form>
