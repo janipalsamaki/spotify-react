@@ -13,13 +13,15 @@ let SearchResult = React.createClass({
       return <Artist key={artist.id} name={artist.name} uri={artist.uri}/>
     });
     let imageUrl = result.album.images[2].url;
+    let imageHeight = result.album.images[2].height;
+    let imageWidth = result.album.images[2].width;
     let trackName = result.name;
     let trackUri = result.uri;
 
     return (
       <div className="SearchResult">
         <Track name={trackName} uri={trackUri}/>
-        <Album name={albumName} imageUrl={imageUrl} uri={albumUri}/>
+        <Album name={albumName} imageUrl={imageUrl} imageHeight={imageHeight} imageWidth={imageWidth} uri={albumUri}/>
         {artists}
       </div>
     );
