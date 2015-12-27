@@ -12,7 +12,8 @@ let SearchForm = React.createClass({
     return (
       <div className="SearchForm">
         <form onSubmit={this.handleSearch}>
-          <input type="text" className="searchString" placeholder="Type in search keywords" value={this.state.searchString}
+          <input type="text" className="searchString" placeholder="Type in search keywords"
+                 value={this.state.searchString}
                  onChange={this.handleChange}/>
           <input type="submit" value="Search"/>
         </form>
@@ -25,16 +26,11 @@ let SearchForm = React.createClass({
     e.preventDefault();
     let spotifyWebApi = new SpotifyWebApi();
 
-    let self = this;
-
-    spotifyWebApi.searchTracks(this.state.searchString, function (error, data) {
-      if (error) {
-        console.error(error);
-      } else {
-        console.log('Tracks:', data);
-      }
-
-      self.setState({results: data});
+    spotifyWebApi.searchTracks(this.state.searchString).then(data => {
+      console.log('Tracks:', data);
+      this.setState({results: data});
+    }, function (error) {
+      console.error(error);
     });
   },
 
