@@ -10,14 +10,16 @@ $spotify-brand-color: #81b71a;
 }
 
 #content {
-  margin: 0 1em 1em 1em;
+  margin: 1em;
 }
 
 .Search {
   font-family: 'Roboto Condensed', sans-serif !important;
 
   .SearchForm {
-
+    .searchString {
+      margin-right: 1em;
+    }
   }
 
   .SearchResults {
