@@ -10,3 +10,7 @@ Simple learning experiments (React).
 ## Building
 
 `npm run build`
+
+## Live demo
+
+http://palsamaki.com/spotify-react/
