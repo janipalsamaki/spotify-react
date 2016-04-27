@@ -9,7 +9,7 @@ let Search = React.createClass({
 
     return (
       <div className={classes}>
-        <h1>Spotify Search (React)</h1>
+        <h1>Spotify Search</h1>
         <SearchForm/>
       </div>
     );

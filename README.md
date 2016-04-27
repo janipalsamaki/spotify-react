@@ -13,4 +13,4 @@ Simple learning experiments (React).
 
 ## Live demo
 
-http://palsamaki.com/spotify-react/
+http://palsamaki.com/spotify-search/
