@@ -17,7 +17,7 @@ let SearchForm = React.createClass({
     return (
       <div className="SearchForm">
         <form onSubmit={this.handleSearch} className={formClasses}>
-          <input type="text" className={searchStringClasses} placeholder="Type in search keywords"
+          <input type="text" className={searchStringClasses} placeholder="Search tracks"
                  value={this.state.searchString}
                  onChange={this.handleChange}/>
           <input type="submit" value="Search" className={buttonClasses}/>
