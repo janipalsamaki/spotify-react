@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import React from 'react';
 import SearchResults from './SearchResults';
 import SpotifyWebApi from 'spotify-web-api-js';
@@ -9,13 +10,17 @@ let SearchForm = React.createClass({
   },
 
   render() {
+    let formClasses = classnames('pure-form');
+    let searchStringClasses = classnames('searchString', 'pure-input-1');
+    let buttonClasses = classnames('pure-button', 'button-primary');
+
     return (
       <div className="SearchForm">
-        <form onSubmit={this.handleSearch}>
-          <input type="text" className="searchString" placeholder="Type in search keywords"
+        <form onSubmit={this.handleSearch} className={formClasses}>
+          <input type="text" className={searchStringClasses} placeholder="Type in search keywords"
                  value={this.state.searchString}
                  onChange={this.handleChange}/>
-          <input type="submit" value="Search"/>
+          <input type="submit" value="Search" className={buttonClasses}/>
         </form>
         <SearchResults results={this.state.results}/>
       </div>

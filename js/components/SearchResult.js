@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import React from 'react';
 import Album from './Album.js';
 import Artist from './Artist.js';
@@ -12,14 +13,16 @@ let SearchResult = React.createClass({
     let artists = result.artists.map(function (artist) {
       return <Artist key={artist.id} name={artist.name} uri={artist.uri}/>
     });
-    let imageUrl = result.album.images[2].url;
-    let imageHeight = result.album.images[2].height;
-    let imageWidth = result.album.images[2].width;
+    let imageUrl = result.album.images[1].url;
+    let imageHeight = result.album.images[1].height;
+    let imageWidth = result.album.images[1].width;
     let trackName = result.name;
     let trackUri = result.uri;
 
+    let classes = classnames('SearchResult', 'pure-u-1', 'pure-u-md-1-2', 'pure-u-lg-1-3');
+
     return (
-      <div className="SearchResult">
+      <div className={classes}>
         <Track name={trackName} uri={trackUri}/>
         <Album name={albumName} imageUrl={imageUrl} imageHeight={imageHeight} imageWidth={imageWidth} uri={albumUri}/>
         {artists}

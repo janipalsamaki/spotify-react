@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import React from 'react';
 import SearchResult from './SearchResult';
 
@@ -12,7 +13,9 @@ let SearchResults = React.createClass({
       });
     }
 
-    return (<div className="SearchResults">{searchResults}</div>);
+    let classes = classnames('SearchResults', 'pure-u-1');
+
+    return (<div className={classes}>{searchResults}</div>);
   }
 });
 

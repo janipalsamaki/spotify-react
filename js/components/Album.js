@@ -6,9 +6,10 @@ let Album = React.createClass({
     return (
       <div className="Album">
         <a className="uri" href={this.props.uri}>
-          <span className="name">{this.props.name}</span>
-          <img className="image" src={this.props.imageUrl} height={this.props.imageHeight}
-               width={this.props.imageWidth}/>
+          <div className="name">{this.props.name}</div>
+          <div>
+            <img className="image" src={this.props.imageUrl} height={this.props.imageHeight} width={this.props.imageWidth}/>
+          </div>
         </a>
       </div>
     );

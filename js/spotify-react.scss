@@ -1,29 +1,37 @@
 $spotify-brand-color: #81b71a;
 
+.pure-g [class *="pure-u"] {
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+#content {
+  margin: 0 1em 1em 1em;
+}
+
 .Search {
-  font-size: 0.9em;
+  font-family: 'Roboto Condensed', sans-serif !important;
 
   .SearchForm {
-    .searchString {
-      display: block;
-      padding: 5px;
-    }
+
+  }
+
+  .SearchResults {
+    margin-top: 1em;
   }
 
   .SearchResult {
-    margin: 10px;
-    clear: both;
+    margin-bottom: 2em;
 
     .Track {
       .name {
+        font-size: larger;
         font-weight: bold;
       }
     }
 
     .Album {
       .image {
-        float: left;
-        padding: 0 10px 10px 0;
+        margin: 0.5em 0 0.5em 0;
       }
     }
 
