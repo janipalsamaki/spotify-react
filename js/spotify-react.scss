@@ -19,6 +19,10 @@ $spotify-brand-color: #81b71a;
   .SearchForm {
     .searchString {
       margin-right: 1em;
+      display: inline-block;
+    }
+    input[type=submit] {
+      display: inline-block;
     }
   }
 
