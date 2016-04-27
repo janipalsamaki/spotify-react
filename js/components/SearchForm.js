@@ -11,12 +11,14 @@ let SearchForm = React.createClass({
 
   render() {
     let formClasses = classnames('pure-form');
+    let searchIconClasses = classnames('fa', 'fa-search');
     let searchStringClasses = classnames('searchString', 'pure-input-2-3', 'pure-input-rounded');
     let buttonClasses = classnames('pure-button');
 
     return (
       <div className="SearchForm">
         <form onSubmit={this.handleSearch} className={formClasses}>
+          <i className={searchIconClasses}></i>
           <input type="text" className={searchStringClasses} placeholder="Spotify track search"
                  value={this.state.searchString}
                  onChange={this.handleChange}/>

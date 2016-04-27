@@ -1,4 +1,10 @@
+$neutral-grey: #cccccc;
 $spotify-brand-color: #81b71a;
+
+body {
+  font-family: 'Roboto Condensed', sans-serif !important;
+  margin: 1em;
+}
 
 .pure-g [class *="pure-u"] {
   font-family: 'Roboto Condensed', sans-serif !important;
@@ -9,18 +15,23 @@ $spotify-brand-color: #81b71a;
   background-color: $spotify-brand-color;
 }
 
-#content {
-  margin: 1em;
-}
-
 .Search {
   font-family: 'Roboto Condensed', sans-serif !important;
 
   .SearchForm {
+    i {
+      color: $neutral-grey;
+      position: absolute;
+      top: 25px;
+      left: 30px;
+    }
+
     .searchString {
       margin: 0 1em 0 0;
       display: inline-block;
+      padding-left: 35px;
     }
+
     input[type=submit] {
       display: inline-block;
     }
@@ -67,5 +78,13 @@ $spotify-brand-color: #81b71a;
     font-family: 'FontAwesome';
     content: "\f14c";
     float: left;
+  }
+}
+
+footer {
+  font-size: x-large;
+
+  a {
+    color: $neutral-grey;
   }
 }
