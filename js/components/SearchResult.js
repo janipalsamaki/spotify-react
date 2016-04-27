@@ -13,6 +13,7 @@ let SearchResult = React.createClass({
     let artists = result.artists.map(function (artist) {
       return <Artist key={artist.id} name={artist.name} uri={artist.uri}/>
     });
+    let duration = result.duration_ms;
     let imageUrl = result.album.images[1].url;
     let imageHeight = result.album.images[1].height;
     let imageWidth = result.album.images[1].width;
@@ -23,7 +24,7 @@ let SearchResult = React.createClass({
 
     return (
       <div className={classes}>
-        <Track name={trackName} uri={trackUri}/>
+        <Track name={trackName} uri={trackUri} duration={duration}/>
         <Album name={albumName} imageUrl={imageUrl} imageHeight={imageHeight} imageWidth={imageWidth} uri={albumUri}/>
         {artists}
       </div>
