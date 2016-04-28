@@ -6,7 +6,7 @@ by [JMPerez](https://github.com/JMPerez).
 
 Resources of interest:
 
-- [React docs](https://facebook.github.io/react/) JavaScript library
+- [React](https://facebook.github.io/react/) JavaScript library
 - [Node.js](https://nodejs.org/) JavaScript runtime
 - JavaScript packages from [npm](https://www.npmjs.com/)
 - [Jest](https://facebook.github.io/jest/) unit testing library
