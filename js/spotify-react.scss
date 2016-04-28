@@ -48,11 +48,15 @@ body {
     .Track {
       .name {
         font-size: larger;
-        font-weight: bold;
+        text-transform: uppercase;
       }
     }
 
     .Album {
+      .name {
+        font-size: smaller;
+      }
+
       .image {
         margin: 0.5em 0 0.5em 0;
         position: relative;
@@ -81,7 +85,8 @@ body {
 
     .Artist {
       .name {
-        font-style: italic;
+        text-transform: uppercase;
+        font-size: smaller;
       }
     }
   }
