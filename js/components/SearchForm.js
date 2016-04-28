@@ -5,6 +5,10 @@ import SpotifyWebApi from 'spotify-web-api-js';
 
 let SearchForm = React.createClass({
 
+  getDefaultProps: function () {
+    return {spotifyWebApi: new SpotifyWebApi()};
+  },
+
   getInitialState: function () {
     return {searchString: '', results: []};
   },
@@ -31,9 +35,8 @@ let SearchForm = React.createClass({
 
   handleSearch: function (e) {
     e.preventDefault();
-    let spotifyWebApi = new SpotifyWebApi();
 
-    spotifyWebApi.searchTracks(this.state.searchString).then(data => {
+    this.props.spotifyWebApi.searchTracks(this.state.searchString).then(data => {
       console.log('Tracks:', data);
       this.setState({results: data});
     }, function (error) {
