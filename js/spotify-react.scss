@@ -101,10 +101,9 @@ body {
 
   a::before {
     color: $spotify-brand-color;
-    margin: 0.13em 0.5em 0 0;
+    margin: 0 0.5em 0 0;
     font-family: 'FontAwesome';
     content: "\f14c";
-    float: left;
   }
 }
 
