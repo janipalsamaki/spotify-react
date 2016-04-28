@@ -18,7 +18,7 @@ let SearchForm = React.createClass({
     return (
       <div className="SearchForm">
         <form onSubmit={this.handleSearch} className={formClasses}>
-          <i className={searchIconClasses}></i>
+          <i className={searchIconClasses}/>
           <input type="text" className={searchStringClasses} placeholder="Spotify track search"
                  value={this.state.searchString}
                  onChange={this.handleChange}/>
