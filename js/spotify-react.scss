@@ -1,3 +1,4 @@
+$album_image_width: 300px;
 $neutral-grey: #cccccc;
 $spotify-brand-color: #81b71a;
 
@@ -54,6 +55,23 @@ body {
     .Album {
       .image {
         margin: 0.5em 0 0.5em 0;
+        position: relative;
+        overflow: hidden;
+        height: $album_image_width;
+        width: $album_image_width;
+
+        img {
+          max-width: 100%;
+          -moz-transition: all 0.3s;
+          -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+        }
+
+        &:hover img {
+          -moz-transform: scale(1.2);
+          -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+        }
       }
     }
 

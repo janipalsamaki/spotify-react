@@ -7,8 +7,8 @@ let Album = React.createClass({
       <div className="Album">
         <a className="uri" href={this.props.uri}>
           <div className="name">{this.props.name}</div>
-          <div>
-            <img className="image" src={this.props.imageUrl} height={this.props.imageHeight} width={this.props.imageWidth}/>
+          <div className="image">
+            <img src={this.props.imageUrl} height={this.props.imageHeight} width={this.props.imageWidth}/>
           </div>
         </a>
       </div>
