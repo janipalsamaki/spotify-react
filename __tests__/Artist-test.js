@@ -14,14 +14,13 @@ describe('Artist', () => {
     let name = 'Artist name';
     let uri = 'http://www.example.org';
 
-    const artist = TestUtils.renderIntoDocument(
-      <Artist uri={uri} name={name} />
-    );
+    let artist = TestUtils.renderIntoDocument(<Artist uri={uri} name={name} />);
 
-    const artistNode = ReactDOM.findDOMNode(artist);
+    let artistNode = ReactDOM.findDOMNode(artist);
+    let link = artistNode.getElementsByTagName('a')[0];
 
-    expect(artistNode.textContent).toEqual(name);
-    expect(artistNode.getElementsByTagName('a')[0].getAttribute('href')).toEqual(uri);
+    expect(link.textContent).toEqual(name);
+    expect(link.getAttribute('href')).toEqual(uri);
   });
 
 });
