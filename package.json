@@ -10,27 +10,27 @@
   },
   "author": "Jani Palsamäki",
   "devDependencies": {
-    "babel-core": "6.9.0",
-    "babel-jest": "12.1.0",
-    "babel-loader": "6.2.4",
-    "babel-preset-es2015": "6.9.0",
-    "babel-preset-react": "6.5.0",
+    "babel-core": "6.14.0",
+    "babel-jest": "15.0.0",
+    "babel-loader": "6.2.5",
+    "babel-preset-es2015": "6.14.0",
+    "babel-preset-react": "6.11.1",
     "classnames": "2.2.5",
-    "css-loader": "0.23.1",
-    "history": "2.1.2",
-    "jest-cli": "12.1.1",
-    "node-sass": "3.7.0",
-    "react": "15.1.0",
-    "react-addons-test-utils": "15.1.0",
-    "react-dom": "15.1.0",
+    "css-loader": "0.25.0",
+    "history": "4.2.0",
+    "jest-cli": "15.1.1",
+    "node-sass": "3.10.0",
+    "react": "15.3.1",
+    "react-addons-test-utils": "15.3.1",
+    "react-dom": "15.3.1",
     "react-hot-loader": "1.3.0",
-    "sass-loader": "3.2.0",
+    "sass-loader": "4.0.2",
     "style-loader": "0.13.1",
-    "webpack": "1.13.1",
-    "webpack-dev-server": "1.14.1"
+    "webpack": "1.13.2",
+    "webpack-dev-server": "1.15.1"
   },
   "dependencies": {
-    "spotify-web-api-js": "0.19.2"
+    "spotify-web-api-js": "0.19.3"
   },
   "jest": {
     "unmockedModulePathPatterns": [
