@@ -10,9 +10,9 @@ let SearchResult = React.createClass({
     let result = this.props.result;
     let albumName = result.album.name;
     let albumUri = result.album.uri;
-    let artists = result.artists.map(function (artist) {
-      return <Artist key={artist.id} name={artist.name} uri={artist.uri}/>
-    });
+    let artists = result.artists.map(
+      artist => <Artist key={artist.id} name={artist.name} uri={artist.uri}/>
+    );
     let duration = result.duration_ms;
     let imageUrl = result.album.images[1].url;
     let imageHeight = result.album.images[1].height;

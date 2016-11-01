@@ -8,9 +8,9 @@ let SearchResults = React.createClass({
     let searchResults = '';
 
     if (typeof this.props.results.tracks != 'undefined' && typeof this.props.results.tracks.items != 'undefined') {
-      searchResults = this.props.results.tracks.items.map(function (track) {
-        return (<SearchResult key={track.id} result={track}/>);
-      });
+      searchResults = this.props.results.tracks.items.map(
+        track => <SearchResult key={track.id} result={track}/>
+      );
     }
 
     let classes = classnames('SearchResults', 'pure-u-1');
