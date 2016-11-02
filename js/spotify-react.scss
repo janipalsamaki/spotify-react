@@ -36,6 +36,17 @@ body {
       display: inline-block;
       border-radius: $border-radius * 2;
     }
+
+    a.clearSearch {
+      position: relative;
+      top: 0.09em;
+      left: -2.63em;
+
+      &:before {
+        font-family: 'FontAwesome';
+        content: "\f057";
+      }
+    }
   }
 
   .SearchResults {

@@ -17,6 +17,7 @@ let SearchForm = React.createClass({
     let formClasses = classnames('pure-form');
     let searchIconClasses = classnames('fa', 'fa-search');
     let searchStringClasses = classnames('searchString', 'pure-input-2-3', 'pure-input-rounded');
+    let searchClearClasses = classnames('clearSearch', 'fa', 'fa-times-circle');
     let buttonClasses = classnames('pure-button');
 
     return (
@@ -26,6 +27,7 @@ let SearchForm = React.createClass({
           <input type="text" className={searchStringClasses} placeholder="Spotify track search"
                  value={this.state.searchString}
                  onChange={this.handleChange}/>
+          <a onClick={this.handleSearchClear} className={searchClearClasses} title="Clear search"/>
           <input type="submit" value="Search" className={buttonClasses}/>
         </form>
         <SearchResults results={this.state.results}/>
@@ -46,6 +48,10 @@ let SearchForm = React.createClass({
 
   handleChange(e) {
     this.setState({searchString: e.target.value});
+  },
+
+  handleSearchClear(e) {
+    this.setState(this.getInitialState());
   }
 });
 
