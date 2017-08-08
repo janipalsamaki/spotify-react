@@ -11,14 +11,14 @@ module.exports = {
   },
   module: {
     loaders: [
-      {test: /\.js?$/, loaders: ['react-hot', 'babel'], exclude: /node_modules/},
+      {test: /\.js?$/, loaders: ['babel-loader'], exclude: /node_modules/},
       {test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader', query: {presets: ['es2015', 'react']}},
-      {test: /\.css$/, loader: "style!css"},
-      {test: /\.scss$/, loaders: ["style", "css", "sass"]}
+      {test: /\.css$/, loader: "style-loader!css-loader"},
+      {test: /\.scss$/, loaders: ["style-loader", "css-loader", "sass-loader"]}
     ]
   },
   plugins: [
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ]
 };
