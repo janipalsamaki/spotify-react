@@ -27,7 +27,3 @@ Resources of interest:
 ## Testing
 
 `npm run test`
-
-## Live demo
-
-http://palsamaki.com/spotify-search/
